@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/places_background"
+    tools:context=".ContainersRegions">
+
+    <Button
+        android:id="@+id/mina"
+        android:layout_width="762px"
+        android:layout_height="280px"
+        android:background="@drawable/mina"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:onClick="mina_region"
+        android:text="mina region"/>
+    <Button
+        android:id="@+id/arafat"
+        android:layout_width="762px"
+        android:layout_height="280px"
+        android:background="@drawable/arafat"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:onClick="arafat_region"
+        android:text="arafat region" />
+    <Button
+        android:id="@+id/muzdalifah"
+        android:layout_width="762px"
+        android:layout_height="280px"
+        android:background="@drawable/muzdalifah"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:onClick="muzdalifah_region"
+        android:text="muzdalifah region" />
+
+</LinearLayout>

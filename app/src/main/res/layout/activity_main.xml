@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/home_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--<LinearLayout-->
+        <!--android:layout_width=""-->
+        <!--android:layout_height=""></LinearLayout>-->
+<!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:src="@drawable/map_logo"-->
+    <!--android:layout_marginRight="-10dp"-->
+    <!--android:layout_height="wrap_content" />-->
+    <Button
+        android:id="@+id/map"
+        android:layout_width="762px"
+        android:layout_height="280px"
+        android:background="@color/home_buttons"
+        android:textColor="@color/home_buttons_text"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:onClick="map"
+
+        android:text="@string/map_container" />
+
+    <Button
+        android:id="@+id/trash"
+        android:layout_width="762px"
+        android:layout_height="280px"
+        android:onClick="trash"
+        android:background="@color/home_buttons"
+        android:textColor="@color/home_buttons_text"
+        android:text="@string/open_container"
+        tools:ignore="DuplicateIds" />
+
+</LinearLayout>

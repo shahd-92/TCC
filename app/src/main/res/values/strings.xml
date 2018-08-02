@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">TCC</string>
+    <string name="map_container">map containers</string>
+    <string name="open_container">open container</string>
+    <string name="mina_region">mina</string>
+    <string name="arafat_region">arafat_region</string>
+    <string name="Muzdalifah_region">Muzdalifah region</string>
+    <string name="mina">mina</string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="map_container">خريطة الحاويات</string>
+    <string name="open_container">فتح الحاوية</string>
+    <string name="mina_region">منى</string>
+    <string name="arafat_region">عرفات</string>
+    <string name="Muzdalifah_region">مزدلفة</string>
+
+</resources>
