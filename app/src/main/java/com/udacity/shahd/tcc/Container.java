@@ -19,6 +19,25 @@ public class Container implements Parcelable {
     private int status;
     private String region;
 
+    public static final String TABLE_NAME = "containers";
+
+    public static final String COLUMN_ID = "id";
+    public static final String COLUMN_NAME = "containerName";
+    public static final String COLUMN_LONT = "lont";
+    public static final String COLUMN_LAT = "lat";
+    public static final String COLUMN_STATUS = "status";
+    public static final String COLUMN_REGION = "region";
+
+    // Create table SQL query
+    public static final String CREATE_TABLE =
+            "CREATE TABLE " + TABLE_NAME + "("
+                    + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + COLUMN_NAME + " TEXT,"
+                    + COLUMN_LONT + " TEXT,"
+                    + COLUMN_LAT + " TEXT,"
+                    + COLUMN_STATUS + " INTEGER,"
+                    + COLUMN_REGION + " TEXT"
+                    + ")";
 
 //    public int getId() {
 //        return recipeId;
@@ -51,10 +70,26 @@ public class Container implements Parcelable {
         return status;
     }
 
-    public Container setId(int id) {
+    public void setId(int id) {
         this.id = id;
-        return this;
     }
+
+    public void setContainerName(String containerName) {
+        this.containerName = containerName;
+    }
+
+    public void setLont(String lont) {
+        this.lont = lont;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
     public void setStatus(int status) {
         this.status = status;
     }

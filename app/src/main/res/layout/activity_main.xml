@@ -16,26 +16,31 @@
     <!--android:src="@drawable/map_logo"-->
     <!--android:layout_marginRight="-10dp"-->
     <!--android:layout_height="wrap_content" />-->
-    <Button
-        android:id="@+id/map"
-        android:layout_width="762px"
-        android:layout_height="280px"
-        android:background="@color/home_buttons"
-        android:textColor="@color/home_buttons_text"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:onClick="map"
 
-        android:text="@string/map_container" />
+
+        <Button
+            android:id="@+id/map"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/button_map"
+            android:gravity="center"
+            android:onClick="map"
+            android:textColor="@color/home_buttons_text"
+            android:text="@string/map_container"/>
+
+
 
     <Button
         android:id="@+id/trash"
-        android:layout_width="762px"
-        android:layout_height="280px"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
         android:onClick="trash"
-        android:background="@color/home_buttons"
+        android:gravity="center"
+        android:background="@drawable/button_tras"
         android:textColor="@color/home_buttons_text"
         android:text="@string/open_container"
         tools:ignore="DuplicateIds" />
+
 
 </LinearLayout>

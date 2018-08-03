@@ -10,21 +10,21 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
 public class ContainersList extends AppCompatActivity{
-    ArrayList<Container> containers;
     ContainersAdapter mAdapter;
     EditText titleEditTxt;
     EditText descEditTxt;
     static int mIndex;
+    public static ArrayList<Container> containers = new ArrayList<>();
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
 //    private RecyclerView.LayoutManager mLayoutManager;
         Bundle args = new Bundle();
+    private DatabaseHelper db;
 
 //    @Override
 //    public void onStart() {
@@ -43,6 +43,7 @@ public class ContainersList extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.containers_list);
+        db = new DatabaseHelper(this);
         if (savedInstanceState == null) {
             // During initial setup, plug in the details fragment.
             Intent intent = this.getIntent();
@@ -51,15 +52,39 @@ public class ContainersList extends AppCompatActivity{
                 Log.e("ContainersList", "index: " + mIndex);
             }
         }
+        Log.d("ContainersList", "onCreate");
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        containers =  new ArrayList<Container>();
+//        MainActivity.createContainer();
+
+//        containers.addAll(MainActivity.containersList);
+        if(mIndex==1) {
+            for (int i = 0; i < MainActivity.containersList.size(); i++) {
+                if (MainActivity.containersList.get(i).getRegion().equals("mina"))
+                    containers.add(MainActivity.containersList.get(i));
+            }
+        }
+        else if(mIndex==2) {
+            for (int i = 0; i < MainActivity.containersList.size(); i++) {
+                if (MainActivity.containersList.get(i).getRegion().equals("arafat"))
+                    containers.add(MainActivity.containersList.get(i));
+            }
+        }
+        else if(mIndex==3) {
+            for (int i = 0; i < MainActivity.containersList.size(); i++) {
+                if (MainActivity.containersList.get(i).getRegion().equals("muzdalifah"))
+                    containers.add(MainActivity.containersList.get(i));
+            }
+        }
 ////        //RETRIEVE
-        Container c1 = new Container(1, "39.889329776","21.407998368", "mina",  "c-m-1",80);
-        Container c2 = new Container(2, "21.4149474","39.8997368", "arafat",  "c-a-1",50);
-        Container c3 = new Container(3, "21.4149474","39.8997368", "muzdalifah",  "c-z-1",10);
-        containers.add(c1);
-        containers.add(c2);
-        containers.add(c3);
+//        Container c1 = new Container(1, "39.895504","21.416422", "mina",  "c-m-1",80);
+//        Container c2 = new Container(4, "39.901738","21.413705", "mina",  "c-m-2",40);
+//        Container c3 = new Container(5, "39.891728","21.412058", "mina",  "c-m-3",10);
+////        Container c4 = new Container(2, "21.4149474","39.8997368", "arafat",  "c-a-1",50);
+////        Container c5 = new Container(3, "21.4149474","39.8997368", "muzdalifah",  "c-z-1",10);
+//        containers.add(c1);
+//        containers.add(c2);
+//        containers.add(c3);
 
 
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this); mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -73,7 +98,6 @@ public class ContainersList extends AppCompatActivity{
             @Override
             public void onItemClick(View v, Container container) {
                 Log.d(String.valueOf(mIndex), "clicked position:" + container.getContainerName());
-                Toast.makeText(v.getContext(), "Item Clicked", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent();
                 intent.setClass(v.getContext(), ContainersMap.class);
 
@@ -109,5 +133,7 @@ public class ContainersList extends AppCompatActivity{
 //        intent.putExtra("index", index);
 //        startActivity(intent);
 //    }
+
+
 
 }

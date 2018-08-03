@@ -26,13 +26,13 @@ public class ContainersRegions extends AppCompatActivity   {
 
     public void arafat_region(View view) {
 
-        Intent intent = new Intent(this, ContainersRegions.class).putExtra("index", 2);
+        Intent intent = new Intent(this, ContainersList.class).putExtra("index", 2);
         startActivity(intent);
     }
 
     public void muzdalifah_region(View view) {
 
-        Intent intent = new Intent(this, ContainersRegions.class).putExtra("index", 3);
+        Intent intent = new Intent(this, ContainersList.class).putExtra("index", 3);
         startActivity(intent);
     }
 
