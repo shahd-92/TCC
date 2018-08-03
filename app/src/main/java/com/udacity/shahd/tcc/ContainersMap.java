@@ -91,12 +91,12 @@ public class ContainersMap extends AppCompatActivity implements OnMapReadyCallba
 //
 //            Log.d("ContainersList", "lit: " + lit +", lont: "+lont);
             mRegion = new LatLng(lit, lont);
-//            if(container.getStatus()<=25)
-//                mMap.addMarker(new MarkerOptions().position(mRegion).title("Mina").icon(BitmapDescriptorFactory.fromResource(R.drawable.red_trash_small)));
-//            else if(container.getStatus()<60 && container.getStatus()>25)
-//                mMap.addMarker(new MarkerOptions().position(mRegion).title("Mina").icon(BitmapDescriptorFactory.fromResource(R.drawable.yellow_trash_small)));
-//            else if(container.getStatus()>=60)
+            if(container.getStatus()<=25)
                 mMap.addMarker(new MarkerOptions().position(mRegion).title("Mina").icon(BitmapDescriptorFactory.fromResource(R.drawable.green_trash_small)));
+            else if(container.getStatus()<60 && container.getStatus()>25)
+                mMap.addMarker(new MarkerOptions().position(mRegion).title("Mina").icon(BitmapDescriptorFactory.fromResource(R.drawable.yellow_trash_small)));
+            else if(container.getStatus()>=60)
+                mMap.addMarker(new MarkerOptions().position(mRegion).title("Mina").icon(BitmapDescriptorFactory.fromResource(R.drawable.red_trash_small)));
 //
 //        }
         // Add a marker in Sydney, Australia, and move the camera.
