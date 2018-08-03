@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "218405538312",
+    "firebase_url": "https://trash-control.firebaseio.com",
+    "project_id": "trash-control",
+    "storage_bucket": "trash-control.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218405538312:android:b2d3adcc77aa8808",
+        "android_client_info": {
+          "package_name": "com.udacity.shahd.tcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218405538312-096eje8rkvnntj8m54o8ipo0imahhrjo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udacity.shahd.tcc",
+            "certificate_hash": "7b7cdf4c6d3c44efac3ecfa4abcd79fb6a68c2f8"
+          }
+        },
+        {
+          "client_id": "218405538312-6a70snjukdgj2ulu2gai0u1gkaacl1h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTw_WSEYBeV51bjvD8_vSESUtk-CQWA9g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218405538312-6a70snjukdgj2ulu2gai0u1gkaacl1h9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
